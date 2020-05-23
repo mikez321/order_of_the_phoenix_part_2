@@ -112,3 +112,7 @@
 .select-field option {
 	font-weight:normal;
 }
+
+.member-block {
+  margin: 40px
+}

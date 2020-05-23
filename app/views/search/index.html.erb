@@ -1,0 +1,13 @@
+<h1><%= @house.name %></h1>
+<h2>Total Members: <%= @house.members.count %></h2>
+
+<% @house.members.each do |member| %>
+  <section class="member-block">
+    <div class="member-<%= member.id %>">
+      <h3>Name: <%= member.name %></h3>
+      <p>Role: <%= member.role %></p>
+      <p>House: <%= member.house %></p>
+      <p>Patrous: <%= member.patronus %></p>
+    </div>
+  </section>
+<% end %>
