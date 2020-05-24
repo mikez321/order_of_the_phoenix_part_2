@@ -14,6 +14,8 @@ describe "seeing members of the order of the phoenix" do
     within ".member-5a0fa7dcae5bc100213c2338" do
       expect(page).to have_content("Sirius Black")
       expect(page).to have_content("Gryffindor")
+      expect(page).to have_content("Patronus: unknown")
+      expect(page).to have_content("Role: unknown")
     end
   end
 end

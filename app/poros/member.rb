@@ -1,18 +1,19 @@
 class Member
-  attr_reader :id, :name, :role, :house, :patronus
+  attr_reader :id, :name, :house
   def initialize(member_info)
+    @member_info = member_info
     @id = member_info[:_id]
     @name = member_info[:name]
-    @role = if member_info[:role].nil?
-              "unknown"
-            else
-              member_info[:role]
-            end
     @house = member_info[:house]
-    @patronus = if member_info[:patronus].nil?
-                  "unknown"
-                else
-                  member_info[:patronus]
-                end
+  end
+
+  def role
+    @member_info[:role] if !@member_info[:role].nil?
+    "unknown"
+  end
+
+  def patronus
+    @member_info[:patronus] if !@member_info[:patronus].nil?
+    "unknown"
   end
 end
